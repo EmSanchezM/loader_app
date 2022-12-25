@@ -1,5 +1,7 @@
 import { useRouteError, isRouteErrorResponse } from 'react-router-dom'
 import { NotFound } from '../NotFound'
+import { Unauthorized } from '../Unauthorized'
+import { Unavailable } from '../Unavailable'
 
 export const ErrorBoundary = () => {
     const error = useRouteError()
@@ -7,9 +9,9 @@ export const ErrorBoundary = () => {
     if (isRouteErrorResponse(error)) {
         if (error.status === 404) return <NotFound />
 
-        if(error.status === 401) return <div>You aren't authorized to see this</div>
+        if(error.status === 401) return <Unauthorized />
 
-        if(error.status === 503) return <div>Looks like our API is down</div>
+        if(error.status === 503) return <Unavailable />
     }
     
     return (

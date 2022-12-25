@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 
-export const NotFound = () => {
+export const Unavailable = () => {
     
     const navigate = useNavigate()
 
@@ -9,13 +9,13 @@ export const NotFound = () => {
 			<section className='mt-24 flex flex-col items-center'>
 				<img
 					className='w-2/3 h-2/3 object-cover'
-					src='https://img.freepik.com/vector-gratis/ups-error-404-ilustracion-concepto-robot-roto_114360-5529.jpg'
-					alt='404'
+					src='https://www.seo-kueche.de/wp-content/uploads/503-error-fehler-code.jpg'
+					alt='503'
 				/>
 				<section className='tracking-widest mt-4 text-center'>
-					<h2 className='text-gray-500 text-6xl block'>404</h2>
+					<h2 className='text-gray-500 text-6xl block'>503</h2>
 					<span className='text-gray-500 text-xl'>
-						Lo sentimos, ¡No pudimos encontrar lo que buscas!
+						Lo sentimos, ¡Parece que nuestra API está caída!
 					</span>
 				</section>
 				<section className='mt-6'>
